@@ -3,7 +3,11 @@ pipeline {
 	stages {
 		stage('Build-1st Stage') {
 			steps {
-				echo "Build stage- Running"
+				x = 2
+				if ( x=>1 )
+				print "success"
+				else
+				print "Failure"
 			}
 		}
 		stage('Testing-2nd Stage') {
