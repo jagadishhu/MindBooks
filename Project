@@ -14,7 +14,7 @@ pipeline {
 		stage('Deploy-3rd Stage') {
 			when {
 				not {
-					branch "main"
+					branch "master"
 			}
 		}
 			steps {
