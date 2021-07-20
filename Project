@@ -4,8 +4,8 @@ pipeline {
 		stage('Build-1st Stage') {
 			steps {
 				x = 2
-				if ( x=>1 )
-				print "success"
+				if x > 1
+				print "Success"
 				else
 				print "Failure"
 			}
