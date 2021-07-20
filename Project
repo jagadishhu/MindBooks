@@ -28,7 +28,7 @@ pipeline {
 		                        echo "Running the Unit Test"
 		                    }
 		            }
-		            stage('Integration Test')
+		            stage('Integration Test') {
 		                    agent {
 		                        docker {
 		                            refuseNode false
@@ -38,6 +38,7 @@ pipeline {
 		                    steps {
 		                            echo "Running the Integration Test"
 		                    }
+				    }
 		    }
 		}
 	}
