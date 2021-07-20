@@ -26,6 +26,11 @@ pipeline {
 		                        echo "Running the Unit Test"
 		                    }
 		            }
+		stage('Success Stage') {
+				steps {
+					echo "Jagadish you Rocked it Man"
+					}
+					}
 		}
 	}
 		          
