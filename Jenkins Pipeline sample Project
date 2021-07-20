@@ -3,22 +3,23 @@ pipeline {
 	stages {
 		stage('Build-1st Stage') {
 			steps {
-				echo "Build stage- Running "
+				echo 'Build stage- Running '
 			}
 		}
 		stage('Testing-2nd Stage') {
 			steps {
-				echo "Testing Stage- Running"
+				input('Do you want to proceed ?')
 			}
 		}
 		stage('Deploy-3rd Stage') {
-			steps {
-				echo "Deploying Stage- Running"
+			when {
+				not {
+					branch "main"
 			}
 		}
-		stage('Monitoring-4th Stage') {
 			steps {
-				echo "Monitoring Stage- Running"
-			}
+				echo ' Hello'
+				}
 		}
-}
+	}
+	
